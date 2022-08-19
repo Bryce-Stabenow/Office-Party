@@ -22,7 +22,7 @@ export default Arena({
          * Bind your custom express routes here:
          */
         app.get("/", (req, res) => {
-            res.send("It's time to kick ass and chew bubblegum!");
+            res.sendFile(__dirname + '/rooms' + '/index.html');
         });
 
         /**
