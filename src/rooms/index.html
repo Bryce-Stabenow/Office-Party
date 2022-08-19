@@ -8,5 +8,17 @@
 </head>
 <body>
     <h1>Time to go!</h1>
+
+    <script src="https://unpkg.com/colyseus.js@^0.14.0/dist/colyseus.js"></script>
+    <script>
+        let client = new Colyseus.Client('ws://localhost:2567');
+        
+        client.create("battle").then(room => {
+            console.log("joined successfully", room);
+        }).catch(e => {
+            console.error("join error", e);
+        });
+
+    </script>
 </body>
 </html>
